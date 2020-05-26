@@ -39,6 +39,7 @@ public class CharacterScript : MonoBehaviour
         diggingFunction();
         inventory();
         rightFunctionRelease();
+        jumpFunctionRelease();
     }
 
     private void jumpFunction()
@@ -55,6 +56,7 @@ public class CharacterScript : MonoBehaviour
         if (transform.position.y > 0)
         {
             jump = false;
+            animator.SetBool("SpeedKeyJump", true);
         }
         if ((transform.position.y > 0 && transform.position.y <= 0.3f) && jump == false)
         {
@@ -63,6 +65,14 @@ public class CharacterScript : MonoBehaviour
             transform.position = new Vector3(xCoor, 0, -1f);
             stopObject();
         }
+    }
+
+    private void jumpFunctionRelease()
+    {
+            if (!Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                animator.SetBool("SpeedKeyJump", false);
+            }
     }
     private void diggingFunction()
     {
