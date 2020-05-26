@@ -49,7 +49,7 @@ public class CharacterScript : MonoBehaviour
                 jump = true;
             }
         }
-        if (transform.position.y > 0)
+        if (transform.position.y >= 0)
         {
             jump = false;
         }
