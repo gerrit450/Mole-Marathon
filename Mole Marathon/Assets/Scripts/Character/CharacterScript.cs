@@ -11,6 +11,7 @@ public class CharacterScript : MonoBehaviour
     private float yCoor;
     private bool jump;
     private bool dig;
+    private Animator animator;
     void Start()
     {
         body = gameObject.GetComponent<Rigidbody>();
@@ -19,6 +20,7 @@ public class CharacterScript : MonoBehaviour
         body.angularDrag = 5;
         Physics.gravity = new Vector3(0f, -25f, 0f); //change gravity to the engine
         Time.timeScale = 1f;
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -36,6 +38,7 @@ public class CharacterScript : MonoBehaviour
         rightFunction();
         diggingFunction();
         inventory();
+        rightFunctionRelease();
     }
 
     private void jumpFunction()
@@ -87,6 +90,15 @@ public class CharacterScript : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow)) // right arrow move the object right
         {
             body.AddForce(30f, 0f, 0f);
+            animator.SetBool("SpeedKeyRight", true);
+        }
+    }
+
+    private void rightFunctionRelease()
+    {
+        if (!Input.GetKey(KeyCode.RightArrow)) //when the right arrow is released
+        {
+            animator.SetBool("SpeedKeyRight", false);
         }
     }
     private void leftFunction() //move the object to the left
