@@ -11,14 +11,18 @@ public class CharacterScript : MonoBehaviour
     private float yCoor;
     private bool jump;
     private bool dig;
+    private Animator animator;
+    private AudioSource walking;
     void Start()
     {
+        walking = gameObject.GetComponent<AudioSource>();
         body = gameObject.GetComponent<Rigidbody>();
         body.useGravity = false;
         body.drag = 1;
         body.angularDrag = 5;
         Physics.gravity = new Vector3(0f, -25f, 0f); //change gravity to the engine
         Time.timeScale = 1f;
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -31,11 +35,12 @@ public class CharacterScript : MonoBehaviour
     {
         xCoor = transform.position.x;
         yCoor = transform.position.y;
-
         leftFunction();
         rightFunction();
         diggingFunction();
         inventory();
+        rightFunctionRelease();
+        jumpFunctionRelease();
     }
 
     private void jumpFunction()
@@ -49,9 +54,10 @@ public class CharacterScript : MonoBehaviour
                 jump = true;
             }
         }
-        if (transform.position.y >= 0)
+        if (transform.position.y > 0)
         {
             jump = false;
+            animator.SetBool("SpeedKeyJump", true);
         }
         if ((transform.position.y > 0 && transform.position.y <= 0.3f) && jump == false)
         {
@@ -60,6 +66,14 @@ public class CharacterScript : MonoBehaviour
             transform.position = new Vector3(xCoor, 0, -1f);
             stopObject();
         }
+    }
+
+    private void jumpFunctionRelease()
+    {
+            if (!Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                animator.SetBool("SpeedKeyJump", false);
+            }
     }
     private void diggingFunction()
     {
@@ -87,6 +101,16 @@ public class CharacterScript : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow)) // right arrow move the object right
         {
             body.AddForce(30f, 0f, 0f);
+            animator.SetBool("SpeedKeyRight", true);
+            
+        }
+    }
+
+    private void rightFunctionRelease()
+    {
+        if (!Input.GetKey(KeyCode.RightArrow)) //when the right arrow is released
+        {
+            animator.SetBool("SpeedKeyRight", false);
         }
     }
     private void leftFunction() //move the object to the left
@@ -94,6 +118,7 @@ public class CharacterScript : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow)) //left arrow move the object left
         {
             body.AddForce(-30f, 0f, 0f);
+            
         }
     }
     private void stopObject()
