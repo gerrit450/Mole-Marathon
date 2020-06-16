@@ -11,12 +11,18 @@ public class cameraScript : MonoBehaviour
 
     void Start()
     {
+<<<<<<< HEAD
         
+=======
+>>>>>>> master
         popUpIsOn = false;
         offset = new Vector3(0f, 0f, -10f);
         pause = GameObject.FindGameObjectWithTag("pause").GetComponent<Canvas>();
         pause.planeDistance = 0;
+<<<<<<< HEAD
         
+=======
+>>>>>>> master
     }
 
     void Update()

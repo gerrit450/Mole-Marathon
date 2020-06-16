@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameOver : MonoBehaviour
 {
      public static Canvas popUp;
+<<<<<<< HEAD
      private bool popUpIsOn;
     void Start()
     {
@@ -24,5 +25,18 @@ public class GameOver : MonoBehaviour
             popUp.planeDistance = 10;
             popUpIsOn = true;
         }
+=======
+    void Start()
+    {
+        popUp = gameObject.GetComponent<Canvas>();
+        popUp.enabled = false;
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+>>>>>>> master
     }
 }
