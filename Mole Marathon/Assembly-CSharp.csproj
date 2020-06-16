@@ -63,7 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
     <Compile Include="Assets\Scripts\BackToGameButton.cs" />
+>>>>>>> master
     <Compile Include="Assets\Scripts\Bugs\BugButtons.cs" />
     <Compile Include="Assets\Scripts\Bugs\BugScript.cs" />
     <Compile Include="Assets\Scripts\Burrow\Burrow.cs" />
@@ -80,6 +83,11 @@
     <Compile Include="Assets\Scripts\FinishLine\finishLine.cs" />
     <Compile Include="Assets\Scripts\GameOver\GameOver.cs" />
     <Compile Include="Assets\Scripts\GameOver\GameOverButtons.cs" />
+<<<<<<< HEAD
+    <Compile Include="Assets\Scripts\General\BackToGameButton.cs" />
+    <Compile Include="Assets\Scripts\General\LevelBackButton.cs" />
+=======
+>>>>>>> master
     <Compile Include="Assets\Scripts\Instruction\Movebutton.cs" />
     <Compile Include="Assets\Scripts\Instruction\back.cs" />
     <Compile Include="Assets\Scripts\Instruction\bugs.cs" />
@@ -92,12 +100,28 @@
     <Compile Include="Assets\Scripts\Instruction\upgrades.cs" />
     <Compile Include="Assets\Scripts\Inventory Menu\newInv.cs" />
     <Compile Include="Assets\Scripts\Leaderboard\backButton.cs" />
+<<<<<<< HEAD
+    <Compile Include="Assets\Scripts\Levels\Level1.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level2.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level3.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level4.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level5.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level6.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level7.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level8.cs" />
+    <Compile Include="Assets\Scripts\Levels\StopMenuMusic.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\CharacterButton.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\InstructionButton.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\LeaderBoard.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\MusicScript.cs" />
+=======
     <Compile Include="Assets\Scripts\LevelBackButton.cs" />
     <Compile Include="Assets\Scripts\Levels\Level1.cs" />
     <Compile Include="Assets\Scripts\Levels\Level2.cs" />
     <Compile Include="Assets\Scripts\MainMenu\CharacterButton.cs" />
     <Compile Include="Assets\Scripts\MainMenu\InstructionButton.cs" />
     <Compile Include="Assets\Scripts\MainMenu\LeaderBoard.cs" />
+>>>>>>> master
     <Compile Include="Assets\Scripts\MainMenu\QuitButton.cs" />
     <Compile Include="Assets\Scripts\MainMenu\StartButton.cs" />
     <Compile Include="Assets\Scripts\Pause\Pause.cs" />
@@ -110,6 +134,11 @@
     <Compile Include="Assets\Scripts\level_assets\WallScript.cs" />
     <Compile Include="Assets\Scripts\level_assets\cameraScript.cs" />
     <Compile Include="Assets\SpriteToMesh.cs" />
+<<<<<<< HEAD
+    <None Include="Assets\Ground materials FD\Information package.txt" />
+    <None Include="Assets\Five Seamless Tileable Ground Textures\read me.txt" />
+=======
+>>>>>>> master
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/gerrit/Documents/GitHub/Mole-Marathon/Mole Marathon/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
