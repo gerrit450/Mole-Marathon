@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+<<<<<<< HEAD
+using System.Runtime.CompilerServices;
+=======
+>>>>>>> master
 
 public class FoxScript : MonoBehaviour
 {
@@ -10,6 +14,10 @@ public class FoxScript : MonoBehaviour
     private Rigidbody body = new Rigidbody();
     private Vector3 position;
     private float areaOfTrigger;
+<<<<<<< HEAD
+    private float yTrigger;
+=======
+>>>>>>> master
     public static int health;
     public Transform target;
     public Text Damage;
@@ -46,6 +54,19 @@ public class FoxScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
+        body.AddForce(-0.7f, 0f, 0f);
+        yTrigger = 0 + target.position.y;
+        print("Trigger: "+ yTrigger);
+        if (target.position.x <= transform.position.x)
+        {
+            if (target.position.x > transform.position.x - areaOfTrigger) // x coordinate trigger
+            {
+                
+                if (target.position.y == yTrigger) // y coordinate trigger
+                {
+                    print("3works");
+=======
         body.AddForce(-0.5f, 0f, 0f);
 
         if (target.position.x <= transform.position.x)
@@ -54,6 +75,7 @@ public class FoxScript : MonoBehaviour
             {
                 if (target.position.y == transform.position.y)
                 {
+>>>>>>> master
                     healthSystem();
                     StartCoroutine("Pause");
                 }
