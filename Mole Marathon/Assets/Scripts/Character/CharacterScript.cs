@@ -7,10 +7,7 @@ using UnityEngine.SceneManagement;
 public class CharacterScript : MonoBehaviour
 {
     private Rigidbody body = new Rigidbody();
-<<<<<<< HEAD
     private BoxCollider colider = new BoxCollider();
-=======
->>>>>>> master
     private float xCoor;
     private float yCoor;
     private bool jump;
@@ -21,16 +18,10 @@ public class CharacterScript : MonoBehaviour
     {
         walking = gameObject.GetComponent<AudioSource>();
         body = gameObject.GetComponent<Rigidbody>();
-<<<<<<< HEAD
         colider = gameObject.GetComponent<BoxCollider>();
         body.useGravity = true;
         body.drag = 2;
         body.angularDrag = 10;
-=======
-        body.useGravity = false;
-        body.drag = 1;
-        body.angularDrag = 5;
->>>>>>> master
         Physics.gravity = new Vector3(0f, -25f, 0f); //change gravity to the engine
         Time.timeScale = 1f;
         animator = GetComponent<Animator>();
@@ -56,11 +47,7 @@ public class CharacterScript : MonoBehaviour
 
     private void jumpFunction()
     {
-<<<<<<< HEAD
         if ((transform.position.y >= 0.3f && transform.position.y <= 0.35f) && jump == false)
-=======
-        if (transform.position.y == 0)
->>>>>>> master
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
@@ -69,7 +56,6 @@ public class CharacterScript : MonoBehaviour
                 jump = true;
             }
         }
-<<<<<<< HEAD
         if (transform.position.y > 0.31f)
         {
             animator.SetBool("SpeedKeyJump", true);
@@ -97,19 +83,6 @@ public class CharacterScript : MonoBehaviour
             {
                 body.AddForce(0f, 700f, 0f);
             }
-=======
-        if (transform.position.y > 0)
-        {
-            jump = false;
-            animator.SetBool("SpeedKeyJump", true);
-        }
-        if ((transform.position.y > 0 && transform.position.y <= 0.3f) && jump == false)
-        {
-            jump = true;
-            body.useGravity = false;
-            transform.position = new Vector3(xCoor, 0, -1f);
-            stopObject();
->>>>>>> master
         }
     }
 
@@ -122,7 +95,6 @@ public class CharacterScript : MonoBehaviour
     }
     private void diggingFunction()
     {
-<<<<<<< HEAD
         if ((transform.position.y >= 0.3f && transform.position.y <= 0.32f) && Input.GetKey(KeyCode.DownArrow)) // digging downwards as long as below ground and downkey is pressed
         {
             body.useGravity = false;
@@ -135,15 +107,11 @@ public class CharacterScript : MonoBehaviour
             colider.enabled = true;
         }
         if (transform.position.y <= 0.3f && Input.GetKey(KeyCode.UpArrow)) // makes object dig upwards as long as up arrow is pressed and underground
-=======
-        if (transform.position.y < 0 && Input.GetKey(KeyCode.UpArrow)) // makes object dig upwards as long as up arrow is pressed and underground
->>>>>>> master
         {
             body.AddForce(0f, 30f, 0f);
             dig = true;
         }
 
-<<<<<<< HEAD
         if (transform.position.y <= 0.3f && Input.GetKey(KeyCode.DownArrow)) // makes object dig upwards as long as up arrow is pressed and underground
         {
             body.AddForce(0f, -30f, 0f);
@@ -164,30 +132,12 @@ public class CharacterScript : MonoBehaviour
                 }
         }
         
-=======
-        if ((transform.position.y > -0.35 && transform.position.y < 0) && dig == true) // if the object is -0.35 from the ground, it will be moved on the ground
-        {
-            transform.position = new Vector3(xCoor, 0, -1f);
-            // stopObject();
-            body.useGravity = true;
-            dig = false;
-            jumpFunction();
-        }
-        if (transform.position.y <= 0 && Input.GetKey(KeyCode.DownArrow)) // digging downwards as long as below ground and downkey is pressed
-        {
-            body.AddForce(0f, -30f, 0f);
-        }
->>>>>>> master
     }
     private void rightFunction() //moves the object to the right
     {
         if (Input.GetKey(KeyCode.RightArrow)) // right arrow move the object right
         {
-<<<<<<< HEAD
             body.AddForce(50f, 0f, 0f);
-=======
-            body.AddForce(30f, 0f, 0f);
->>>>>>> master
             animator.SetBool("SpeedKeyRight", true);
             
         }
@@ -204,11 +154,7 @@ public class CharacterScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow)) //left arrow move the object left
         {
-<<<<<<< HEAD
             body.AddForce(-50f, 0f, 0f);
-=======
-            body.AddForce(-30f, 0f, 0f);
->>>>>>> master
             
         }
     }

@@ -63,7 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BackToGameButton.cs" />
     <Compile Include="Assets\Scripts\Bugs\BugButtons.cs" />
     <Compile Include="Assets\Scripts\Bugs\BugScript.cs" />
     <Compile Include="Assets\Scripts\Burrow\Burrow.cs" />
@@ -94,7 +93,6 @@
     <Compile Include="Assets\Scripts\Instruction\upgrades.cs" />
     <Compile Include="Assets\Scripts\Inventory Menu\newInv.cs" />
     <Compile Include="Assets\Scripts\Leaderboard\backButton.cs" />
-    <Compile Include="Assets\Scripts\LevelBackButton.cs" />
     <Compile Include="Assets\Scripts\Levels\Level1.cs" />
     <Compile Include="Assets\Scripts\Levels\Level2.cs" />
     <Compile Include="Assets\Scripts\Levels\Level3.cs" />
@@ -123,37 +121,37 @@
     <None Include="Assets\Ground materials FD\Information package.txt" />
     <None Include="Assets\Five Seamless Tileable Ground Textures\read me.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/gerrit/Documents/GitHub/Mole-Marathon/Mole Marathon/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/gerrit/Desktop/Mole Marathon/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/gerrit/Documents/GitHub/Mole-Marathon/Mole Marathon/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/gerrit/Desktop/Mole Marathon/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/gerrit/Documents/GitHub/Mole-Marathon/Mole Marathon/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/gerrit/Desktop/Mole Marathon/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/gerrit/Documents/GitHub/Mole-Marathon/Mole Marathon/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/gerrit/Desktop/Mole Marathon/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/gerrit/Documents/GitHub/Mole-Marathon/Mole Marathon/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/gerrit/Desktop/Mole Marathon/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/gerrit/Documents/GitHub/Mole-Marathon/Mole Marathon/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/gerrit/Desktop/Mole Marathon/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/gerrit/Documents/GitHub/Mole-Marathon/Mole Marathon/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/gerrit/Desktop/Mole Marathon/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/gerrit/Documents/GitHub/Mole-Marathon/Mole Marathon/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/gerrit/Desktop/Mole Marathon/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/gerrit/Documents/GitHub/Mole-Marathon/Mole Marathon/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/gerrit/Desktop/Mole Marathon/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/gerrit/Documents/GitHub/Mole-Marathon/Mole Marathon/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/gerrit/Desktop/Mole Marathon/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/gerrit/Documents/GitHub/Mole-Marathon/Mole Marathon/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/gerrit/Desktop/Mole Marathon/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

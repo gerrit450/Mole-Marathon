@@ -24,11 +24,7 @@ public class Falcon : MonoBehaviour
         transform.position = pos; //sets the position of the falcon
         turningPoint = new Vector3(-20f, 20f, -1f);
         falconSpeed = 5f;
-<<<<<<< HEAD
         falcon.AddForce(-2.2f, -2.2f, 0f);
-=======
-        falcon.AddForce(-2f, -2f, 0f);
->>>>>>> master
         foxScript = FindObjectOfType<FoxScript>(); // returns the pobject that matches
     }
 
@@ -46,21 +42,13 @@ public class Falcon : MonoBehaviour
             falcon.transform.position = Vector3.MoveTowards(falcon.transform.position, target.transform.position, .05f);
             //doesn't subtract the vectors, but compares them, which means it never returns negative value
             float distance = Vector3.Distance(falcon.transform.position, target.transform.position); //calculates the distance between the falcon and the character
-<<<<<<< HEAD
             
-=======
-
->>>>>>> master
             if (distance < 1.5f)  //falcon attacks the mole and flies away, mole looses health points
             {
                 moving = false;
                 foxScript.healthSystem(); // decrease health points
             }
-<<<<<<< HEAD
             if (target.transform.position.y < -0.1f) // if the mole goes under ground
-=======
-            if (target.transform.position.y < 0f) // if the mole goes under ground
->>>>>>> master
             {
 
                 tP = new Vector3(target.transform.position.x, 1.2f, -1f); // a point just above the mole
