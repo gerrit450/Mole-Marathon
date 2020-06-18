@@ -7,7 +7,6 @@ using System.Runtime.CompilerServices;
 
 public class FoxScript : MonoBehaviour
 {
-    
     private Rigidbody body = new Rigidbody();
     private Vector3 position;
     private float areaOfTrigger;
@@ -15,7 +14,6 @@ public class FoxScript : MonoBehaviour
     public static int health;
     public Transform target;
     public Text Damage;
-    
     void Start()
     {
         /*
@@ -24,7 +22,7 @@ public class FoxScript : MonoBehaviour
          */
         body = gameObject.GetComponent<Rigidbody>();
         body.useGravity = false;
-        areaOfTrigger = 1f;
+        areaOfTrigger = 2.2f;
         position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         body.freezeRotation.Equals(true);
        
@@ -49,20 +47,16 @@ public class FoxScript : MonoBehaviour
     void Update()
     {
         body.AddForce(-0.7f, 0f, 0f);
-        yTrigger = 0 + target.position.y;
-        print("Trigger: "+ yTrigger);
-        if (target.position.x <= transform.position.x)
+        if (target.position.y <= transform.position.y + areaOfTrigger && target.position.y > transform.position.y - areaOfTrigger) // y coordinate trigger
         {
-            if (target.position.x > transform.position.x - areaOfTrigger) // x coordinate trigger
-            {
-                
-                if (target.position.y == yTrigger) // y coordinate trigger
-                {
-                    print("3works");
-                    healthSystem();
-                    StartCoroutine("Pause");
-                }
-            }
+              if (target.position.x <= transform.position.x + areaOfTrigger)
+              {
+                    if (target.position.x > transform.position.x - areaOfTrigger) // x coordinate trigger
+                    {
+                        healthSystem();
+                        StartCoroutine("Pause");
+                    }
+              }
         }
     }
 
@@ -115,5 +109,6 @@ public class FoxScript : MonoBehaviour
         enabled = true;
 
     }
+
 
 }

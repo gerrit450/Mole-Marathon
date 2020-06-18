@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class CharacterScript : MonoBehaviour
 {
+
+    private int speed;
+    private int speedBoost;
     private Rigidbody body = new Rigidbody();
     private BoxCollider colider = new BoxCollider();
     private float xCoor;
@@ -16,6 +19,8 @@ public class CharacterScript : MonoBehaviour
     private AudioSource walking;
     void Start()
     {
+        speed = 30;
+        speedBoost = 0;
         walking = gameObject.GetComponent<AudioSource>();
         body = gameObject.GetComponent<Rigidbody>();
         colider = gameObject.GetComponent<BoxCollider>();
@@ -97,39 +102,36 @@ public class CharacterScript : MonoBehaviour
     {
         if ((transform.position.y >= 0.3f && transform.position.y <= 0.32f) && Input.GetKey(KeyCode.DownArrow)) // digging downwards as long as below ground and downkey is pressed
         {
+            jump = false;
             body.useGravity = false;
             body.drag = 3;
             colider.enabled = false;
-            body.AddForce(0f, -30f, 0f);
+            body.AddForce(0f, -speed, 0f);
         }
-        if(transform.position.y < 0)
+        if(transform.position.y < 0.143f)
         {
             colider.enabled = true;
         }
         if (transform.position.y <= 0.3f && Input.GetKey(KeyCode.UpArrow)) // makes object dig upwards as long as up arrow is pressed and underground
         {
-            body.AddForce(0f, 30f, 0f);
+            body.AddForce(0f, speed+speedBoost, 0f);
             dig = true;
         }
 
         if (transform.position.y <= 0.3f && Input.GetKey(KeyCode.DownArrow)) // makes object dig upwards as long as up arrow is pressed and underground
         {
-            body.AddForce(0f, -30f, 0f);
+            body.AddForce(0f, -speed-speedBoost, 0f);
             dig = true;
         }
 
-        if (transform.position.y > 0 && transform.position.y < 0.3f) // if the object is -0.35 from the ground, it will be moved on the ground
+        else if (transform.position.y > 0 && transform.position.y < 0.3f) // if the object is -0.35 from the ground, it will be moved on the ground
         {
-            if (Input.GetKey(KeyCode.UpArrow))
-                {
                 transform.position = new Vector3(xCoor, 0.3f, -1f);
                 body.drag = 2;
-                // stopObject();
                 body.useGravity = true;
                 colider.enabled = true;
                 dig = false;
                 jumpFunction();
-                }
         }
         
     }
@@ -137,7 +139,7 @@ public class CharacterScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow)) // right arrow move the object right
         {
-            body.AddForce(50f, 0f, 0f);
+            body.AddForce(speed+20+speedBoost, 0f, 0f);
             animator.SetBool("SpeedKeyRight", true);
             
         }
@@ -154,7 +156,7 @@ public class CharacterScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow)) //left arrow move the object left
         {
-            body.AddForce(-50f, 0f, 0f);
+            body.AddForce(-speed-20+speedBoost, 0f, 0f);
             
         }
     }
@@ -170,5 +172,10 @@ public class CharacterScript : MonoBehaviour
         {
             SceneManager.LoadScene("Character");
         }
+    }
+
+    public void setSpeedBoost(int boost)
+    {
+        speedBoost = boost;
     }
 }
