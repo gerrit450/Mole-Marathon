@@ -106,6 +106,7 @@ public class CharacterScript : MonoBehaviour
             body.drag = 3;
             GroundCollider.enabled = false;
             body.AddForce(0f, -speed, 0f);
+            animator.SetBool("SpeedKeyDig", true);
         }
         //if(transform.position.y < 0.143f)
         //{
@@ -131,6 +132,7 @@ public class CharacterScript : MonoBehaviour
                 GroundCollider.enabled = true;
                 dig = false;
                 jumpFunction();
+                animator.SetBool("SpeedKeyDig", false);
         }
         
     }
