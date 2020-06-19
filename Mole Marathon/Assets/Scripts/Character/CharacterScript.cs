@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Security.Cryptography;
+using System.Collections.Specialized;
 
 public class CharacterScript : MonoBehaviour
 {
@@ -12,6 +14,12 @@ public class CharacterScript : MonoBehaviour
     private bool jump;
     private bool dig;
     private Animator animator;
+<<<<<<< Updated upstream
+=======
+    private AudioSource walking;
+    private bool falling;
+    private SpriteRenderer spriteRenderer;
+>>>>>>> Stashed changes
     void Start()
     {
         body = gameObject.GetComponent<Rigidbody>();
@@ -21,12 +29,13 @@ public class CharacterScript : MonoBehaviour
         Physics.gravity = new Vector3(0f, -25f, 0f); //change gravity to the engine
         Time.timeScale = 1f;
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
         jumpFunction();
-      //  inventory();
+        //  inventory();
     }
 
     void FixedUpdate()
@@ -39,6 +48,7 @@ public class CharacterScript : MonoBehaviour
         diggingFunction();
         inventory();
         rightFunctionRelease();
+        leftFunctionRelease();
         jumpFunctionRelease();
     }
 
@@ -101,6 +111,10 @@ public class CharacterScript : MonoBehaviour
         {
             body.AddForce(30f, 0f, 0f);
             animator.SetBool("SpeedKeyRight", true);
+<<<<<<< Updated upstream
+=======
+            spriteRenderer.flipX = false;
+>>>>>>> Stashed changes
         }
     }
 
@@ -115,7 +129,21 @@ public class CharacterScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow)) //left arrow move the object left
         {
+<<<<<<< Updated upstream
             body.AddForce(-30f, 0f, 0f);
+=======
+            body.AddForce(-speed-20+speedBoost, 0f, 0f);
+            animator.SetBool("SpeedKeyLeft", true);
+            spriteRenderer.flipX = true;
+        }
+    }
+
+    private void leftFunctionRelease()
+    {
+        if (!Input.GetKey(KeyCode.LeftArrow)) //when the right arrow is released
+        {
+            animator.SetBool("SpeedKeyLeft", false);
+>>>>>>> Stashed changes
         }
     }
     private void stopObject()
