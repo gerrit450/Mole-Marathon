@@ -13,6 +13,7 @@ public class CharacterScript : MonoBehaviour
     private bool jump;
     private bool dig;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private AudioSource walking;
     private bool falling;
     void Start()
@@ -28,6 +29,7 @@ public class CharacterScript : MonoBehaviour
         Physics.gravity = new Vector3(0f, -25f, 0f); //change gravity to the engine
         Time.timeScale = 1f;
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -43,6 +45,7 @@ public class CharacterScript : MonoBehaviour
         diggingFunction();
         inventory();
         rightFunctionRelease();
+        leftFunctionRelease();
         jumpFunctionRelease();
     }
 
@@ -137,7 +140,7 @@ public class CharacterScript : MonoBehaviour
         {
             body.AddForce(speed+20+speedBoost, 0f, 0f);
             animator.SetBool("SpeedKeyRight", true);
-            
+            spriteRenderer.flipX = false;
         }
     }
 
@@ -153,9 +156,19 @@ public class CharacterScript : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow)) //left arrow move the object left
         {
             body.AddForce(-speed-20+speedBoost, 0f, 0f);
-            
+            animator.SetBool("SpeedKeyLeft", true);
+            spriteRenderer.flipX = true;
         }
     }
+
+    private void leftFunctionRelease()
+    {
+        if (!Input.GetKey(KeyCode.LeftArrow)) //when the right arrow is released
+        {
+            animator.SetBool("SpeedKeyLeft", false);
+        }
+    }
+
     private void stopObject()
     {
         body.isKinematic = true;
