@@ -6,24 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class CharacterScript : MonoBehaviour
 {
-
+    private BoxCollider GroundCollider = new BoxCollider();
     private int speed;
     private int speedBoost;
     private Rigidbody body = new Rigidbody();
-    private BoxCollider colider = new BoxCollider();
-    private float xCoor;
-    private float yCoor;
     private bool jump;
     private bool dig;
     private Animator animator;
     private AudioSource walking;
+    private bool falling;
     void Start()
     {
+        GroundCollider = GameObject.Find("GroundCollision").GetComponent<BoxCollider>();
         speed = 30;
         speedBoost = 0;
         walking = gameObject.GetComponent<AudioSource>();
         body = gameObject.GetComponent<Rigidbody>();
-        colider = gameObject.GetComponent<BoxCollider>();
         body.useGravity = true;
         body.drag = 2;
         body.angularDrag = 10;
@@ -40,8 +38,6 @@ public class CharacterScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        xCoor = transform.position.x;
-        yCoor = transform.position.y;
         leftFunction();
         rightFunction();
         diggingFunction();
@@ -105,13 +101,13 @@ public class CharacterScript : MonoBehaviour
             jump = false;
             body.useGravity = false;
             body.drag = 3;
-            colider.enabled = false;
+            GroundCollider.enabled = false;
             body.AddForce(0f, -speed, 0f);
         }
-        if(transform.position.y < 0.143f)
-        {
-            colider.enabled = true;
-        }
+        //if(transform.position.y < 0.143f)
+        //{
+        //    colider.enabled = true;
+        //}
         if (transform.position.y <= 0.3f && Input.GetKey(KeyCode.UpArrow)) // makes object dig upwards as long as up arrow is pressed and underground
         {
             body.AddForce(0f, speed+speedBoost, 0f);
@@ -124,12 +120,12 @@ public class CharacterScript : MonoBehaviour
             dig = true;
         }
 
-        else if (transform.position.y > 0 && transform.position.y < 0.3f) // if the object is -0.35 from the ground, it will be moved on the ground
+        else if (transform.position.y > 0.1 && transform.position.y < 0.3f) // if the object is -0.35 from the ground, it will be moved on the ground
         {
-                transform.position = new Vector3(xCoor, 0.3f, -1f);
+                //transform.position = new Vector3(xCoor, 0.3f, -1f);
                 body.drag = 2;
                 body.useGravity = true;
-                colider.enabled = true;
+                GroundCollider.enabled = true;
                 dig = false;
                 jumpFunction();
         }

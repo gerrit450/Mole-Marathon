@@ -120,6 +120,7 @@
     <Compile Include="Assets\Scripts\level_assets\UIPosition.cs" />
     <Compile Include="Assets\Scripts\level_assets\WallScript.cs" />
     <Compile Include="Assets\Scripts\level_assets\cameraScript.cs" />
+    <Compile Include="Assets\Scripts\traps\spikes.cs" />
     <Compile Include="Assets\SpriteToMesh.cs" />
     <None Include="Assets\Imphenzia\GradientSky\ReadMe - GradientSky.txt" />
     <None Include="Assets\Imphenzia\GradientSky\Shaders\VertexColorCamera.shader" />
