@@ -27,8 +27,10 @@ public class GameOverButtons : MonoBehaviour
     // Update is called once per frame
     void tryAgain()
    {
-        SceneManager.LoadScene("Level 1");
-   }
+        Time.timeScale = 1;
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name); //will reload current scene
+    }
 
     void LevelSelect()
     {
@@ -44,4 +46,5 @@ public class GameOverButtons : MonoBehaviour
     {
         Application.Quit();
     }
+
 }
