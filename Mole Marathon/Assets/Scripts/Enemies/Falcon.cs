@@ -24,7 +24,7 @@ public class Falcon : MonoBehaviour
         transform.position = pos; //sets the position of the falcon
         turningPoint = new Vector3(-20f, 20f, -1f);
         falconSpeed = 5f;
-        falcon.AddForce(-2.2f, -2.2f, 0f);
+        falcon.velocity = new Vector3(-2.2f, -2.2f, 0f);
         foxScript = FindObjectOfType<FoxScript>(); // returns the pobject that matches
     }
 
@@ -52,20 +52,20 @@ public class Falcon : MonoBehaviour
             {
 
                 tP = new Vector3(target.transform.position.x, 1.2f, -1f); // a point just above the mole
-                falcon.AddForce(5f, -2f, 0f);
+                falcon.velocity = new Vector3(5f, -2f, 0f);
 
                 falcon.transform.position = Vector3.MoveTowards(falcon.transform.position, tP, .05f); //falcon moves toward that position
 
                 Vector3 mPosition = (turningPoint - falcon.transform.position).normalized;
 
                 falcon.MovePosition(falcon.transform.position + mPosition * falconSpeed * Time.deltaTime);
-                falcon.AddForce(6f, 5f, 0f);
+                falcon.velocity = new Vector3(6f, 2f, 0f);
             }
         }
         else
         {
             falcon.transform.position = Vector3.MoveTowards(falcon.transform.position, turningPoint, .05f); //falcon flies away
-            falcon.AddForce(2f, 2f, 0f);
+            falcon.velocity = new Vector3(2f, 2f, 0f);
 
         }
         if (transform.position.y > 20)
