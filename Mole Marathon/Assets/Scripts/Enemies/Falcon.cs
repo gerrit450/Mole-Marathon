@@ -12,7 +12,8 @@ public class Falcon : MonoBehaviour
     private Vector3 turningPoint;
     private Vector3 tP;
     public float falconSpeed;
-  
+
+
 
     void Start()
     {
@@ -26,11 +27,14 @@ public class Falcon : MonoBehaviour
         falconSpeed = 5f;
         falcon.velocity = new Vector3(-2.2f, -2.2f, 0f);
         foxScript = FindObjectOfType<FoxScript>(); // returns the pobject that matches
+        
+        
     }
 
     void Update()
     {
         chasing();
+        checkOrientation();
     }
 
     void chasing()
@@ -81,6 +85,21 @@ public class Falcon : MonoBehaviour
 
     }
 
+    public void checkOrientation()
+    {
+        if(falcon.transform.position.x > target.position.x)
+        {
+            var rotation = transform.rotation.eulerAngles;
+            rotation.y = 0;
+            falcon.transform.rotation = Quaternion.Euler(rotation);
+        }
+        else if (falcon.transform.position.x < target.position.x)
+        {
+            var rotation = transform.rotation.eulerAngles;
+            rotation.y = 180;
+            falcon.transform.rotation = Quaternion.Euler(rotation);
+        }
+    }
     IEnumerator Pause()
     {
         enabled = false;
