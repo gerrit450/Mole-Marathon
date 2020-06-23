@@ -111,9 +111,6 @@ public class newInv : MonoBehaviour
                 break;
 
         }
-
-
-           
     }
 
     void assignment()

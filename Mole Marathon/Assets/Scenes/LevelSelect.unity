@@ -560,7 +560,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 234158688}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102900000, guid: 35dcd36e7c98f0943b1b051183522ae5, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &234158688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -801,7 +812,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 398658442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c50dbb79815ce964393dff53267ada4e, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &428286141
@@ -964,7 +975,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 430416272}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102900000, guid: 598a4ce1eb49fc34eaabc349f9a1be2c, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &430416272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1173,7 +1195,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 467474702}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102900000, guid: 981a1345b78e6fd4c8906593f009e216, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &467474702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2389,7 +2422,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1128676283}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102900000, guid: 57984072ccfbe3e438e5e045ab53b950, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1128676283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2991,7 +3035,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1437081269}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102900000, guid: 1eda6f84971ff2c448d605b5c65f0c73, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1437081269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3200,7 +3255,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1497201977}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102900000, guid: 3e7e119167c391c4ab32233d72ef3af5, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1497201977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3941,7 +4007,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: b73ddfb0fe113dc49865e8bb4d7bdda7, type: 3}
+      - m_Target: {fileID: 102900000, guid: b966ba9e7035ba14d9a6a2ff693fdf8a, type: 3}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:

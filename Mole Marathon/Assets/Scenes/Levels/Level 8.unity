@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 31581189}
   - component: {fileID: 31581188}
   m_Layer: 5
-  m_Name: Restart
+  m_Name: restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15570,7 +15570,7 @@ GameObject:
   - component: {fileID: 726812457}
   - component: {fileID: 726812456}
   m_Layer: 5
-  m_Name: menu
+  m_Name: m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17120,7 +17120,7 @@ GameObject:
   - component: {fileID: 829504346}
   - component: {fileID: 829504345}
   m_Layer: 5
-  m_Name: UpgradeStore
+  m_Name: upgradeStore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20542,7 +20542,7 @@ GameObject:
   - component: {fileID: 1067797271}
   - component: {fileID: 1067797270}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Q
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

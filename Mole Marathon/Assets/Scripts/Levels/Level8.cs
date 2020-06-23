@@ -15,8 +15,8 @@ public class Level8 : MonoBehaviour, IPointerEnterHandler
     private void Start()
     {
         sound = GameObject.Find("Music").GetComponent<AudioSource>();
-        //click = GameObject.Find("Level 8").GetComponent<Button>();
-        //click.onClick.AddListener(mouse);
+        click = GameObject.Find("Level 8").GetComponent<Button>();
+        click.onClick.AddListener(mouse);
 
     }
 

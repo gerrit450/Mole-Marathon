@@ -48,9 +48,9 @@ public class Falcon : MonoBehaviour
                 moving = false;
                 foxScript.healthSystem(); // decrease health points
             }
-            if (target.transform.position.y < -0.1f) // if the mole goes under ground
+            if (target.transform.position.y <-0.5f) // if the mole goes under ground
             {
-
+                moving = false;
                 tP = new Vector3(target.transform.position.x, 1.2f, -1f); // a point just above the mole
                 falcon.velocity = new Vector3(5f, -2f, 0f);
 

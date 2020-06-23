@@ -15,8 +15,8 @@ public class Level3 : MonoBehaviour, IPointerEnterHandler
     private void Start()
     {
         sound = GameObject.Find("Music").GetComponent<AudioSource>();
-        //click = GameObject.Find("Level 3").GetComponent<Button>();
-        //click.onClick.AddListener(mouse);
+        click = GameObject.Find("Level 3").GetComponent<Button>();
+        click.onClick.AddListener(mouse);
 
     }
 

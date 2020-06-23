@@ -10,16 +10,16 @@ public class PauseMenuButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pauseButtons[0] = GameObject.Find("Restart").GetComponent<Button>();
+        pauseButtons[0] = GameObject.Find("restart").GetComponent<Button>();
         pauseButtons[0].onClick.AddListener(reload);
 
-        pauseButtons[1] = GameObject.Find("menu").GetComponent<Button>();
+        pauseButtons[1] = GameObject.Find("m").GetComponent<Button>();
         pauseButtons[1].onClick.AddListener(Menu);
 
-        pauseButtons[2] = GameObject.Find("Quit").GetComponent<Button>();
+        pauseButtons[2] = GameObject.Find("Q").GetComponent<Button>();
         pauseButtons[2].onClick.AddListener(Quit);
 
-        pauseButtons[3] = GameObject.Find("UpgradeStore").GetComponent<Button>();
+        pauseButtons[3] = GameObject.Find("upgradeStore").GetComponent<Button>();
         pauseButtons[3].onClick.AddListener(UpgradeStore);
 
 
@@ -42,7 +42,7 @@ public class PauseMenuButtons : MonoBehaviour
 
     void Quit()
     {
-        Application.Quit();
+        Application.Quit(0);
     }
 
     void UpgradeStore()
