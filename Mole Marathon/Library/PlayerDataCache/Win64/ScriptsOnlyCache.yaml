@@ -312,7 +312,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13252}
     - Class: 114
-      Script: {instanceID: 14852}
+      Script: {instanceID: 40988}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2134,4 +2134,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Levels/Level 6.unity
   - Assets/Scenes/Levels/Level 7.unity
   - Assets/Scenes/Levels/Level 8.unity
-  playerPath: C:/Users/gerrit/Desktop/New folder/Mole Marathon.exe
+  playerPath: C:/Users/gerrit/Desktop/Executable Folder/Mole Marathon.exe
