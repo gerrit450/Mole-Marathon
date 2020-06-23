@@ -25,6 +25,7 @@ public class CharacterScript : MonoBehaviour
     public Falcon falcon;
     public static string nameOfTheLevel;
     private AudioSource jumpSound;
+    private SpriteRenderer spriteRenderer;
     void Start()
     {
         fox = FindObjectOfType<FoxScript>();
@@ -43,6 +44,7 @@ public class CharacterScript : MonoBehaviour
         Time.timeScale = 1f;
         animator = GetComponent<Animator>();
         nameOfTheLevel = SceneManager.GetActiveScene().name;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -65,6 +67,7 @@ public class CharacterScript : MonoBehaviour
         diggingFunction();
         inventory();
         rightFunctionRelease();
+        leftFunctionRelease();
         jumpFunctionRelease();
        
     }
@@ -156,7 +159,7 @@ public class CharacterScript : MonoBehaviour
         {
             body.AddForce(speed+20, 0f, 0f);
             animator.SetBool("SpeedKeyRight", true);
-            
+            spriteRenderer.flipX = false;
         }
     }
 
@@ -172,9 +175,19 @@ public class CharacterScript : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow)) //left arrow move the object left
         {
             body.AddForce(-speed-20, 0f, 0f);
-            
+            animator.SetBool("SpeedKeyLeft", true);
+            spriteRenderer.flipX = true;
         }
     }
+
+    private void leftFunctionRelease()
+    {
+        if (!Input.GetKey(KeyCode.LeftArrow)) //when the right arrow is released
+        {
+            animator.SetBool("SpeedKeyLeft", false);
+        }
+    }
+
     private void stopObject()
     {
         body.isKinematic = true;
